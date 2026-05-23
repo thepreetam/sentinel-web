@@ -332,7 +332,7 @@ export function FeaturesSection() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            Sentinel Edge Gateway
+            The Sentinel Codec
           </h2>
         </div>
 

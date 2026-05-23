@@ -41,7 +41,7 @@ export function TestimonialsSection() {
             Use cases
           </span>
           <h2 className="text-4xl lg:text-6xl font-display tracking-tight mb-4">
-            Where Sentinel works.
+            Where the Sentinel Edge Gateway works.
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl">
             Remote infrastructure where connectivity costs money. Typical savings of 40-65% on satellite backhaul, varying by deployment.

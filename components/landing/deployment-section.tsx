@@ -4,18 +4,18 @@ import { useEffect, useRef, useState } from "react";
 
 const platforms = [
   {
-    name: "Jetson Orin",
-    type: "Arm-based edge",
-    desc: "Ideal for local surveillance processing. Target platform (validation in progress).",
+    name: "Sentinel Edge Gateway",
+    type: "Jetson Orin hardware appliance",
+    desc: "Pre-loaded with the Sentinel codec. Ideal for local surveillance processing. Target platform (validation in progress).",
   },
   {
     name: "NVIDIA T4 / A100",
-    type: "Cloud GPU",
+    type: "Cloud GPU (Sentinel codec)",
     desc: "Batch processing, multi-stream surveillance. 80+ fps on single GPU.",
   },
   {
     name: "AMD Ryzen AI",
-    type: "Consumer-grade edge",
+    type: "Workstation (Sentinel codec)",
     desc: "Runs on latest Ryzen 9 processors. Bring inference to workstations.",
   },
 ];
@@ -55,7 +55,7 @@ export function DeploymentSection() {
           <p className={`text-lg text-muted-foreground mt-4 max-w-2xl transition-all duration-700 delay-100 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}>
-            Sentinel packages as a Docker container. Designed for Jetson Orin, NVIDIA T4 GPUs, and AMD Ryzen AI edge devices.
+            The Sentinel codec runs as a Docker container. The Sentinel Edge Gateway is a pre-configured Jetson Orin appliance.<br />Same software, your choice of hardware.
           </p>
         </div>
 
