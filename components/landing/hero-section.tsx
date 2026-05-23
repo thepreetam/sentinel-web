@@ -77,7 +77,7 @@ export function HeroSection() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            Your existing codecs were built for humans.<br />Sentinel was built for neural networks.
+            Your codec was built for humans.<br />Your consumer is a neural network.
           </p>
         </div>
         
