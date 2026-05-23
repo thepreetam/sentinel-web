@@ -83,7 +83,7 @@ export function ArchitectureSection() {
           }`}
         >
           <p className="text-sm text-muted-foreground">
-            Full frame reconstruction from BL+EL is deterministic — not generative. Admissible under Federal Rule of Evidence 901 and State v. Rittenhouse standards. Video evidence chains remain unbroken and cryptographically verifiable.
+            Full frame reconstruction from BL+EL is deterministic — not generative. Supports strong chain-of-custody via cryptographic hashing and local storage, which can help meet authentication standards such as FRE 901. Admissibility is determined on a case-by-case basis.
           </p>
         </div>
       </div>

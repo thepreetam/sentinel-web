@@ -12,19 +12,19 @@ const features = [
   {
     number: "02",
     title: "Temporal Prediction Engine",
-    description: "JEPA-based predictor forecasts next frame latent without motion vectors. Eliminates 62% of inter-frame bitrate vs H.265.",
+    description: "JEPA-based predictor forecasts next frame latent without motion vectors. Early tests show 40-60% inter-frame bitrate reduction vs H.265.",
     visual: "ai",
   },
   {
     number: "03",
     title: "Learned Entropy Coding",
-    description: "GMM-based entropy model delivers 5.6x better compression than traditional Laplace approximations.",
+    description: "GMM-based entropy model. Outperforms traditional Laplace approximations in early benchmarks.",
     visual: "collab",
   },
   {
     number: "04",
     title: "Edge-Optimized Runtime",
-    description: "14.7M parameters. Deploys on Jetson, NVIDIA T4, AMD Ryzen AI at 80+ fps with minimal memory bandwidth.",
+    description: "14.7M parameters. Deploys on Jetson, NVIDIA T4, AMD Ryzen AI. Targets 80+ fps under benchmark conditions.",
     visual: "security",
   },
 ];

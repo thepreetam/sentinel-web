@@ -80,10 +80,10 @@ export function HeroSection() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 pb-12">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {[
-              { value: "62%", label: "bitrate reduction" },
-              { value: "$24K", label: "monthly savings" },
-              { value: "<1 mo", label: "payback period" },
-              { value: "99.5%", label: "SLA uptime" },
+              { value: "50-65%", label: "effective bandwidth reduction" },
+              { value: "$15-40K+", label: "potential monthly savings" },
+              { value: "1-4 mo", label: "typical payback period" },
+              { value: "99.5%", label: "target uptime SLA" },
             ].map((stat, idx) => (
               <div key={idx} className="text-center lg:text-left">
                 <div className="text-3xl lg:text-4xl font-display text-foreground mb-2">{stat.value}</div>

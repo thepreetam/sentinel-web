@@ -48,28 +48,28 @@ function AnimatedCounter({ end, suffix = "", prefix = "" }: { end: number; suffi
 
 const metrics = [
   { 
-    value: 62, 
-    suffix: "%", 
+    value: 50, 
+    suffix: "-65%", 
     prefix: "",
-    label: "P-frame bitrate reduction vs H.265 at GOP=8",
+    label: "effective bandwidth reduction for AI inference workloads vs H.265",
   },
   { 
     value: 7.2, 
     suffix: "pp", 
     prefix: "+",
-    label: "detection accuracy gain vs H.265 at 1.95 BPP",
+    label: "detection accuracy advantage vs H.265 in early tests",
   },
   { 
     value: 0.37, 
     suffix: "×", 
     prefix: "",
-    label: "P-frame / I-frame bit ratio — predicted frames cost 37% of I-frame bits",
+    label: "P-frame / I-frame bit ratio — 37% of I-frame bits for predicted frames",
   },
   { 
     value: 14.7, 
     suffix: "M", 
     prefix: "",
-    label: "parameters — 80+ fps on NVIDIA T4",
+    label: "parameters — 80+ fps on NVIDIA T4 in benchmark conditions",
   },
 ];
 
@@ -107,7 +107,7 @@ export function MetricsSection() {
               Benchmarked against H.265
             </h2>
             <p className="text-lg text-muted-foreground mt-4 max-w-2xl">
-              Extensive evaluation on diverse surveillance scenarios. Sentinel consistently outperforms traditional codecs while maintaining detectability.
+              Early results on surveillance footage. Performance varies with scene complexity, motion, and resolution.
             </p>
           </div>
         </div>

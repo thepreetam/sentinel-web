@@ -56,7 +56,7 @@ export function CtaSection() {
           <p className={`text-lg text-muted-foreground mt-4 max-w-2xl transition-all duration-700 delay-100 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}>
-            We are actively looking for a small number of surveillance operators to become design partners. Test Sentinel on your real deployment data and help shape the future of machine-perception codecs.
+            We are looking for surveillance operators to test Sentinel on their deployment data. Early access, roadmap influence, and co-development opportunities in exchange for real-world feedback.
           </p>
         </div>
 

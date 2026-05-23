@@ -4,30 +4,30 @@ const useCases = [
   {
     vertical: "Offshore Oil & Gas",
     before: "200 Mbps @ $38K/mo",
-    after: "74 Mbps @ $14K/mo",
-    savings: "$288K/yr",
-    payback: "<1 month",
+    after: "70-100 Mbps @ $13-19K/mo",
+    savings: "$228-300K/yr",
+    payback: "1-4 months",
   },
   {
     vertical: "Remote Pipeline Networks",
     before: "2+ Gbps @ $190K/mo",
-    after: "750 Mbps @ $71K/mo",
-    savings: "$1.43M/yr",
-    payback: "<2 weeks",
+    after: "700-1000 Mbps @ $67-95K/mo",
+    savings: "$1.1-1.5M/yr",
+    payback: "1-3 months",
   },
   {
     vertical: "Island & Archipelago Ops",
     before: "300 Mbps @ $57K/mo",
-    after: "110 Mbps @ $21K/mo",
-    savings: "$432K/yr",
-    payback: "<1 month",
+    after: "105-150 Mbps @ $20-29K/mo",
+    savings: "$336-444K/yr",
+    payback: "1-4 months",
   },
   {
     vertical: "Remote Substations",
     before: "150 Mbps @ $28.5K/mo",
-    after: "55 Mbps @ $10.5K/mo",
-    savings: "$216K/yr",
-    payback: "<1 month",
+    after: "53-75 Mbps @ $10-14K/mo",
+    savings: "$174-222K/yr",
+    payback: "1-4 months",
   },
 ];
 
@@ -44,7 +44,7 @@ export function TestimonialsSection() {
             Where Sentinel works.
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl">
-            Remote infrastructure where connectivity costs money. Every location we support saves $12,000–$60,000/month in satellite and backhaul fees.
+            Remote infrastructure where connectivity costs money. Typical savings of 40-65% on satellite backhaul, varying by deployment.
           </p>
         </div>
 
