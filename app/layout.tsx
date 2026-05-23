@@ -23,7 +23,6 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: 'SENTINEL — Learned Video Compression',
   description: 'JEPA-based video codec for edge deployment. 62% bandwidth reduction over H.264.',
-  generator: 'v0.app',
 }
 
 export default function RootLayout({
