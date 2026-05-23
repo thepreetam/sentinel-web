@@ -54,7 +54,7 @@ export function HeroSection() {
             }`}
           >
             <span className="block">SENTINEL</span>
-            <span className="block text-muted-foreground text-[clamp(1.5rem,4vw,3rem)]">The first machine-vision codec</span>
+            <span className="block text-muted-foreground text-[clamp(1.5rem,4vw,3rem)]">A machine-vision codec</span>
           </h1>
         </div>
         
@@ -65,7 +65,7 @@ export function HeroSection() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            Your codec was built for humans.<br />Your consumer is a neural network.
+            Your existing codecs were built for humans.<br />Sentinel was built for neural networks.
           </p>
         </div>
         
