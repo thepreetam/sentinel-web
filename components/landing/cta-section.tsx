@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 const benefits = [
   {
     title: "Test on your data",
-    desc: "Run Sentinel in your environment with your own cameras and analytics stack.",
+    desc: "In your environment with your own cameras and analytics stack.",
   },
   {
     title: "Direct influence",
