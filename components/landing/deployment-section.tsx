@@ -70,7 +70,9 @@ export function DeploymentSection() {
             >
               <h3 className="text-xl font-display mb-1">{p.name}</h3>
               <p className="text-xs font-mono text-muted-foreground mb-4">{p.type}</p>
-              <p className="text-muted-foreground leading-relaxed">{p.desc}</p>
+              <p className="text-muted-foreground leading-relaxed">
+                {(() => { const parts = p.desc.split('. '); return <>{parts[0]}.<br />{parts.slice(1).join('. ')}</>; })()}
+              </p>
             </div>
           ))}
         </div>
