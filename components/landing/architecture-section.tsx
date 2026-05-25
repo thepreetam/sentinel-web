@@ -62,12 +62,15 @@ export function ArchitectureSection() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <h3 className="text-2xl font-display mb-4">Enhancement Layer</h3>
+            <h3 className="text-2xl font-display mb-4">
+              Enhancement Layer
+              <span className="ml-3 text-xs font-mono text-amber-600 bg-amber-50 dark:text-amber-400 dark:bg-amber-950 px-2 py-0.5 rounded-full">In Development</span>
+            </h3>
             <p className="text-muted-foreground mb-6">
-              8-bit, 128-channel residuals. Stored on local NVMe. Fetched on-demand when a human needs to see.
+              8-bit, 128-channel residuals. Stored on local NVMe. Fetched on-demand when a human needs to see. Available as a beta feature for design partners in weeks 4-6 of pilot.
             </p>
             <ul className="space-y-3">
-              {["On-device forensic storage", "Full frame reconstruction", "Deterministic (not generative)"].map((item) => (
+              {["On-device forensic storage", "Deterministic reconstruction (not generative)", "Cryptographic hashing for chain-of-custody support"].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
                   <Check className="w-4 h-4 mt-0.5 shrink-0" />
                   {item}
@@ -83,7 +86,7 @@ export function ArchitectureSection() {
           }`}
         >
           <p className="text-sm text-muted-foreground">
-            Full frame reconstruction from BL+EL is deterministic — not generative. Supports strong chain-of-custody via cryptographic hashing and local storage, which can help meet authentication standards such as FRE 901. Admissibility is determined on a case-by-case basis.
+            Chain-of-custody support and FRE 901 alignment require the enhancement layer, which is in development. Admissibility is determined on a case-by-case basis. We do not claim "legally admissible" status today.
           </p>
         </div>
       </div>

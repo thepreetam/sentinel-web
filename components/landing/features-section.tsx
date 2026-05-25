@@ -2,29 +2,29 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const features = [
+const codecFeatures = [
   {
     number: "01",
-    title: "Semantic Latent Representation",
-    description: "ViT-Tiny encoder with 192 channels x 16x16 semantic latent. Captures machine-relevant features instead of human-visible pixels.",
+    title: "Encode",
+    description: "ViT-Tiny encoder compresses each frame into a 192-channel semantic latent. Captures machine-relevant features, not human-visible pixels.",
     visual: "deploy",
   },
   {
     number: "02",
-    title: "Temporal Prediction Engine",
-    description: "JEPA-based predictor forecasts next frame latent without motion vectors. Early tests show 40-60% inter-frame bitrate reduction vs H.265.",
+    title: "Predict",
+    description: "JEPA temporal predictor forecasts the next frame's latent without traditional motion vectors.",
     visual: "ai",
   },
   {
     number: "03",
-    title: "Learned Entropy Coding",
-    description: "GMM-based entropy model. Outperforms traditional Laplace approximations in early benchmarks.",
+    title: "Residual",
+    description: "GMM entropy model codes only the prediction error. Outperforms traditional Laplace approximations in early benchmarks.",
     visual: "collab",
   },
   {
     number: "04",
-    title: "Edge-Optimized Runtime",
-    description: "14.7M parameters. Deploys on Jetson, NVIDIA T4, AMD Ryzen AI. Targets 80+ fps under benchmark conditions.",
+    title: "Edge Runtime",
+    description: "14.7M parameters. 80+ fps under benchmark conditions. Deploys on Jetson Orin NX/AGX, NVIDIA T4, AMD Ryzen AI.",
     visual: "security",
   },
 ];
@@ -245,7 +245,7 @@ function AnimatedVisual({ type }: { type: string }) {
   }
 }
 
-function FeatureCard({ feature, index }: { feature: typeof features[0]; index: number }) {
+function FeatureCard({ feature, index }: { feature: typeof codecFeatures[0]; index: number }) {
   const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -325,23 +325,65 @@ export function FeaturesSection() {
         <div className="mb-16 lg:mb-24">
           <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
             <span className="w-8 h-px bg-foreground/30" />
-            Platform
+            Products
           </span>
           <h2
             className={`text-4xl lg:text-6xl font-display tracking-tight transition-all duration-700 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            The Sentinel Codec
+            Sentinel Codec
           </h2>
         </div>
 
-        {/* Features List */}
+        {/* Codec Features */}
         <div>
-          {features.map((feature, index) => (
+          {codecFeatures.map((feature, index) => (
             <FeatureCard key={feature.number} feature={feature} index={index} />
           ))}
         </div>
+
+        {/* Sentinel Edge Gateway */}
+        <div className={`mt-24 transition-all duration-700 ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        }`}
+        style={{ transitionDelay: "200ms" }}
+      >
+        <div className="mb-12">
+          <h3 className="text-3xl lg:text-5xl font-display tracking-tight mb-4">
+            Sentinel Edge Gateway
+          </h3>
+          <p className="text-lg text-muted-foreground max-w-2xl">
+            Pre-configured Jetson Orin NX/AGX appliance. Ships to your remote site ready to run. Ingests 4+ RTSP camera feeds, streams compressed base layer to cloud via satellite, stores enhancement layer on local NVMe.
+          </p>
+        </div>
+
+        <div className="border border-foreground/10">
+          <table className="w-full text-sm">
+            <tbody>
+              {[
+                { spec: "Module", value: "Jetson Orin NX 16GB or AGX" },
+                { spec: "Storage", value: "256GB NVMe" },
+                { spec: "Cameras", value: "Up to 4 x 1080p @ 30fps" },
+                { spec: "Network", value: "Satellite / VSAT / cellular backhaul" },
+                { spec: "Power", value: "12V DC, 15-25W continuous" },
+                { spec: "Software", value: "Sentinel codec runtime (Docker container, RTSP ingestion, base layer streaming)" },
+              ].map((row, i) => (
+                <tr key={row.spec} className="border-b border-foreground/10 last:border-b-0">
+                  <td className="px-6 py-4 font-mono text-muted-foreground w-48">{row.spec}</td>
+                  <td className="px-6 py-4">{row.value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div className="mt-4 p-4 border border-foreground/10 bg-foreground/[0.02]">
+          <p className="text-xs text-muted-foreground">
+            Note: Jetson Orin Nano is not supported — lacks hardware video encoding required for forensic fallback streams.
+          </p>
+        </div>
+      </div>
       </div>
     </section>
   );

@@ -4,23 +4,10 @@ import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
-const benefits = [
-  {
-    title: "Test on your data",
-    desc: "In your environment with your own cameras and analytics stack.",
-  },
-  {
-    title: "Direct influence",
-    desc: "Feedback that shapes the product roadmap and priorities.",
-  },
-  {
-    title: "Early access",
-    desc: "Priority access to new models, features, and optimizations.",
-  },
-  {
-    title: "Co-development",
-    desc: "Opportunity for joint publications, case studies, and collaboration.",
-  },
+const steps = [
+  { number: "1", title: "Share your footage", desc: "Send 2-3 one-minute clips from your typical remote site scenes. We provide an SFTP link upon application." },
+  { number: "2", title: "See the comparison", desc: "We run Sentinel vs H.265 on your data and send you a side-by-side bitrate and accuracy report within 48 hours." },
+  { number: "3", title: "Pilot on-site", desc: "If the numbers work, we ship a Sentinel Edge Gateway to your site. 90-day pilot, no upfront hardware cost." },
 ];
 
 export function CtaSection() {
@@ -56,23 +43,33 @@ export function CtaSection() {
           <p className={`text-lg text-muted-foreground mt-4 max-w-2xl transition-all duration-700 delay-100 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}>
-            We are looking for surveillance operators to test Sentinel on their deployment data. Early access, roadmap influence, and co-development opportunities in exchange for real-world feedback.
+            For remote infrastructure operators: offshore energy, pipeline networks, island/maritime facilities, remote substations. We are not accepting urban surveillance, smart city, or retail deployments at this time.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-foreground/10 mb-12">
-          {benefits.map((benefit, i) => (
+        <div className="grid md:grid-cols-3 gap-px bg-foreground/10 mb-12">
+          {steps.map((step, i) => (
             <div
-              key={benefit.title}
+              key={step.title}
               className={`bg-background p-8 transition-all duration-700 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: `${i * 100}ms` }}
             >
-              <h3 className="text-xl font-display mb-3">{benefit.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{benefit.desc}</p>
+              <span className="font-mono text-sm text-muted-foreground">Step {step.number}</span>
+              <h3 className="text-xl font-display mt-2 mb-3">{step.title}</h3>
+              <p className="text-muted-foreground leading-relaxed text-sm">{step.desc}</p>
             </div>
           ))}
+        </div>
+
+        <div className="mb-8 p-6 border border-foreground/10 bg-foreground/[0.02]">
+          <h4 className="font-display text-lg mb-2">Who should apply</h4>
+          <ul className="space-y-1 text-sm text-muted-foreground">
+            <li>Operations Manager responsible for remote site bandwidth budgets</li>
+            <li>Infrastructure Engineer managing satellite/VSAT backhaul</li>
+            <li>Security Director at offshore, pipeline, or island operations</li>
+          </ul>
         </div>
 
         <div className="flex flex-col sm:flex-row items-start gap-4">
@@ -82,7 +79,7 @@ export function CtaSection() {
             asChild
           >
             <a href="mailto:preetam@mahamaia.com">
-              Schedule Pilot
+              Apply for Design Partner Program
               <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
             </a>
           </Button>

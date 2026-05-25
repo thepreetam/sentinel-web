@@ -6,6 +6,7 @@ import { MetricsSection } from "@/components/landing/metrics-section";
 import { ArchitectureSection } from "@/components/landing/architecture-section";
 import { TestimonialsSection } from "@/components/landing/testimonials-section";
 import { DeploymentSection } from "@/components/landing/deployment-section";
+import { PricingSection } from "@/components/landing/pricing-section";
 import { DevelopersSection } from "@/components/landing/developers-section";
 import { CtaSection } from "@/components/landing/cta-section";
 import { FooterSection } from "@/components/landing/footer-section";
@@ -21,6 +22,7 @@ export default function Home() {
       <ArchitectureSection />
       <TestimonialsSection />
       <DeploymentSection />
+      <PricingSection />
       <DevelopersSection />
       <CtaSection />
       <FooterSection />

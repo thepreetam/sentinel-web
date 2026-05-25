@@ -131,6 +131,9 @@ export function MetricsSection() {
             </div>
           ))}
         </div>
+        <div className="mt-8 text-xs text-muted-foreground font-mono">
+          Benchmark conditions: 1080p surveillance footage, YOLOv5su probe, 30 fps. Your deployment results will vary.
+        </div>
       </div>
     </section>
   );

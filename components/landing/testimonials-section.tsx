@@ -2,31 +2,35 @@
 
 const useCases = [
   {
-    vertical: "Offshore Oil & Gas",
+    vertical: "Offshore Oil & Gas Platform",
+    desc: "20 cameras x 10 Mbps = 200 Mbps backhaul",
     before: "200 Mbps @ $38K/mo",
     after: "70-100 Mbps @ $13-19K/mo",
     savings: "$228-300K/yr",
     payback: "1-4 months",
   },
   {
-    vertical: "Remote Pipeline Networks",
+    vertical: "Remote Pipeline Compressor Station",
+    desc: "40 cameras x 10 Mbps = 400 Mbps backhaul",
     before: "2+ Gbps @ $190K/mo",
     after: "700-1000 Mbps @ $67-95K/mo",
-    savings: "$1.1-1.5M/yr",
+    savings: "$456-600K/yr",
     payback: "1-3 months",
   },
   {
-    vertical: "Island & Archipelago Ops",
+    vertical: "Island / Maritime Operations",
+    desc: "15 cameras x 10 Mbps = 150 Mbps backhaul",
     before: "300 Mbps @ $57K/mo",
     after: "105-150 Mbps @ $20-29K/mo",
-    savings: "$336-444K/yr",
+    savings: "$171-222K/yr",
     payback: "1-4 months",
   },
   {
-    vertical: "Remote Substations",
+    vertical: "Remote Electrical Substation",
+    desc: "10 cameras x 10 Mbps = 100 Mbps backhaul",
     before: "150 Mbps @ $28.5K/mo",
     after: "53-75 Mbps @ $10-14K/mo",
-    savings: "$174-222K/yr",
+    savings: "$114-150K/yr",
     payback: "1-4 months",
   },
 ];
@@ -44,14 +48,15 @@ export function TestimonialsSection() {
             Where the Sentinel Edge Gateway works.
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl">
-            Remote infrastructure where connectivity costs money. Typical savings of 40-65% on satellite backhaul, varying by deployment.
+            Remote infrastructure where connectivity costs money. Typical deployments: 10-40 cameras per site on satellite/VSAT backhaul.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-px bg-foreground/10">
           {useCases.map((uc, i) => (
             <div key={uc.vertical} className="bg-background p-8">
-              <h3 className="text-xl font-display mb-6">{uc.vertical}</h3>
+              <h3 className="text-xl font-display mb-2">{uc.vertical}</h3>
+              <p className="text-sm text-muted-foreground mb-6 font-mono">{uc.desc}</p>
               <div className="grid grid-cols-2 gap-6 text-sm">
                 <div>
                   <p className="text-muted-foreground mb-1">Before</p>
@@ -72,6 +77,11 @@ export function TestimonialsSection() {
               </div>
             </div>
           ))}
+        </div>
+        <div className="mt-8 p-4 border border-foreground/10 bg-foreground/[0.02]">
+          <p className="text-xs text-muted-foreground">
+            Savings estimates assume VSAT/satellite pricing of $150-250 per Mbps per month. Your actual backhaul pricing may differ. Gateway hardware lease cost is separate — see pricing section for current rates. Contact us for a site-specific ROI model.
+          </p>
         </div>
       </div>
     </section>
