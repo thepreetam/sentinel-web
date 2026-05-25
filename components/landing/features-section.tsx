@@ -316,7 +316,7 @@ export function FeaturesSection() {
 
   return (
     <section
-      id="architecture"
+      id="platform"
       ref={sectionRef}
       className="relative py-24 lg:py-32"
     >

@@ -19,7 +19,7 @@ export function ArchitectureSection() {
   }, []);
 
   return (
-    <section id="svc" ref={sectionRef} className="relative py-24 lg:py-32">
+    <section id="architecture" ref={sectionRef} className="relative py-24 lg:py-32">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div className="mb-16 lg:mb-20">
           <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
