@@ -6,7 +6,7 @@ const platforms = [
   {
     name: "Sentinel Edge Gateway",
     type: "Jetson Orin hardware appliance",
-    desc: "Pre-loaded with the Sentinel codec. Ideal for local surveillance processing. Target platform (validation in progress).",
+    desc: "Pre-loaded with the Sentinel codec. Ideal for local surveillance processing.",
   },
   {
     name: "NVIDIA T4 / A100",
