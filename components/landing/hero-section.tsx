@@ -66,8 +66,7 @@ export function HeroSection() {
             }`}
           >
             <span className="block">SENTINEL</span>
-            <span className="block text-muted-foreground text-[clamp(1.5rem,4vw,3rem)]">A machine-vision codec</span>
-            <span className="block text-muted-foreground text-xs sm:text-sm font-mono mt-4">Edge codec + Gateway appliance for remote industrial sites</span>
+            <span className="block text-muted-foreground text-[clamp(1.5rem,4vw,3rem)]">AI-native video compression for machine vision</span>
           </h1>
         </div>
         
