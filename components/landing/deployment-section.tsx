@@ -55,7 +55,7 @@ export function DeploymentSection() {
           <p className={`text-lg text-muted-foreground mt-4 max-w-2xl transition-all duration-700 delay-100 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}>
-            The Sentinel codec runs as a Docker container. The Sentinel Edge Gateway is a pre-configured Jetson Orin appliance.<br />Same software, your choice of hardware.
+            The Sentinel codec runs as a Docker container. The Sentinel Edge Gateway is a pre-configured Jetson Orin appliance. Same software, your choice of hardware.
           </p>
         </div>
 
