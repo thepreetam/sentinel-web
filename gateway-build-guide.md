@@ -20,13 +20,25 @@ The Sentinel Edge Gateway is a Jetson Orin-based appliance that runs the Sentine
 
 **Total BOM (1 unit): ~$900-1,000**
 
-### Alternative: Pre-built Jetson Orin
+### Important: Orin NX Required (Not Nano)
+
+Jetson Orin Nano lacks NVENC hardware encoding. Software H.265 at 1080p on Nano's ARM cores achieves only 3-8 fps — insufficient for real-time multi-stream. **Use Orin NX 16GB or AGX only.**
+
+### Pre-built Options
 
 | Model | Pros | Cons | Price |
 |-------|------|------|-------|
 | NVIDIA Jetson Orin NX Developer Kit | Official, well-supported | No enclosure, developer form factor | $599 (module+carrier) |
 | Auvidea JNX42-NX | Rugged, industrial temp range | More expensive | $850 |
 | Seeed reComputer J4012 | Complete with enclosure, RTC, PoE | Limited availability | $750 |
+
+### Scale Pricing (Estimate)
+
+| Volume | Unit Cost | Notes |
+|--------|-----------|-------|
+| 1-10 | $900-1,000 | Retail modules + carrier boards, hand assembly |
+| 10-50 | $800-900 | Distributor pricing on modules, batch carrier order |
+| 50-100+ | $700-800 | ODM pricing on module + custom carrier integration |
 
 ---
 
@@ -302,4 +314,4 @@ For quantities >10 units, consider a pre-built solution:
 3. **Ship config** — Gateway auto-configures on first boot via MQTT (download camera config from cloud)
 4. **Zero-touch provisioning** — Generate per-unit credentials at manufacturing time
 
-Target unit cost at Q100: **~$600-700** (down from $900-1,000 at Q1).
+Target unit cost at Q100: **~$700-800** (down from $900-1,000 at Q1), dependent on ODM pricing for Orin NX module + custom carrier integration.
