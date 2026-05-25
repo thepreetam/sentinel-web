@@ -7,6 +7,8 @@ const navLinks = [
   { name: "Products", href: "#platform" },
   { name: "Workflow", href: "#workflow" },
   { name: "Performance", href: "#performance" },
+  { name: "Architecture", href: "#architecture" },
+  { name: "Use Cases", href: "#use-cases" },
   { name: "Pricing", href: "#pricing" },
   { name: "Gateway Trial", href: "#design-partners", highlight: true },
 ];
